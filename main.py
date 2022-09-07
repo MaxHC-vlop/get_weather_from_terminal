@@ -19,7 +19,6 @@ def main():
         url = URL_TEMPLATE.format(location)
         response = requests.get(url, params=payload)
         response.raise_for_status()
-        print(response.text)
 
 
 if __name__ == '__main__':
