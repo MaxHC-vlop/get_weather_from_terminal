@@ -9,8 +9,7 @@ def main():
     for location in LOCATIONS:
         payload = {
             'lang': 'ru',
-            'M': '',
-            'u': '',
+            'm': '',
             'n': '',
             'T': '',
             'q': '',
@@ -19,6 +18,7 @@ def main():
         url = URL_TEMPLATE.format(location)
         response = requests.get(url, params=payload)
         response.raise_for_status()
+        return response.text
 
 
 if __name__ == '__main__':
